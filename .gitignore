@@ -9,6 +9,10 @@
 *.user
 *.userosscache
 *.sln.docstates
+Sorting_algorithm_visualized_in_the_console.vcxproj.filters
+Sorting_algorithm_visualized_in_the_console.vcxproj
+Sorting_algorithm_visualized_in_the_console.vcxpro.user
+.conan
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
