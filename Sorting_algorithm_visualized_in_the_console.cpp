@@ -29,6 +29,7 @@ int main()
     Display_Sort(Array, number);// Display the array before sorting
     Quick_Sort(Array, 0, number-1,number);// Perform Quick Sort
     Display_Sort(Array, number);// Display the sorted array
+    delete[] Array;
 }
 int Only_Number()
 {
