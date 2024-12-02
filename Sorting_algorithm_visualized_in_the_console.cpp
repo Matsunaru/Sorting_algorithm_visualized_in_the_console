@@ -1,20 +1,44 @@
-﻿// Sorting_algorithm_visualized_in_the_console.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
-//
+﻿#include <iostream>
+#include <iomanip>
+#include <cstdlib>
+#include <ctime>
+int Only_Number();
+void Generte_numbers(int number);
+void Quick_Sort();
+void Display_Sort();
 
-#include <iostream>
+
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "How many Element do you want to sort: ";
+    Generte_numbers(Only_Number());
 }
-
-// Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
-// Debugowanie programu: F5 lub menu Debugowanie > Rozpocznij debugowanie
-
-// Porady dotyczące rozpoczynania pracy:
-//   1. Użyj okna Eksploratora rozwiązań, aby dodać pliki i zarządzać nimi
-//   2. Użyj okna programu Team Explorer, aby nawiązać połączenie z kontrolą źródła
-//   3. Użyj okna Dane wyjściowe, aby sprawdzić dane wyjściowe kompilacji i inne komunikaty
-//   4. Użyj okna Lista błędów, aby zobaczyć błędy
-//   5. Wybierz pozycję Projekt > Dodaj nowy element, aby utworzyć nowe pliki kodu, lub wybierz pozycję Projekt > Dodaj istniejący element, aby dodać istniejące pliku kodu do projektu
-//   6. Aby w przyszłości ponownie otworzyć ten projekt, przejdź do pozycji Plik > Otwórz > Projekt i wybierz plik sln
+int Only_Number()
+{
+    int input;
+    if (std::cin >> input)
+    {
+        return input;
+    }
+    else
+    {
+        std::cout << "We accept only number Bro";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
+}
+void Generte_numbers(int number)
+{
+    int* Array = new int[number];
+    srand(time(NULL));
+    for (int i = 0; i < number; i++)
+    {
+       Array[i] = rand() % 30 + 1;
+    }
+    /*for (int i = 0; i < number; i++)
+    {
+        std::cout << Array[i] << std::endl;
+    }*/
+}
